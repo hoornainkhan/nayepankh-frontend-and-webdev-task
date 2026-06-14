@@ -3,7 +3,7 @@
 A complete NGO website with dark mode, animations, and donation system.
 
 ## Live Demo
-https://nayepankh-foundation.onrender.com
+https://nayepankh-frontend-and-webdev-task.onrender.com/
 
 ## Pages
 - **Home** - Hero animation, impact stats, team section
