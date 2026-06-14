@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Donate - NayePankh Foundation</title>
+<meta content="Your contribution fuels a child's dream. Donate now to NayePankh Foundation and receive 80G tax benefits." name="description"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Hanken+Grotesk:wght@600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Scripts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/11.0.8/framer-motion.js"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dadada",
+                    "on-background": "#1a1c1c",
+                    "background": "#f9f9f9",
+                    "primary": "#003f87",
+                    "deep-onyx": "#1A1A1A",
+                    "secondary-container": "#fdc003",
+                    "inverse-on-surface": "#f1f1f1",
+                    "on-primary-fixed": "#001a40",
+                    "on-tertiary-fixed-variant": "#4d4543",
+                    "primary-fixed-dim": "#acc7ff",
+                    "primary-fixed": "#d7e2ff",
+                    "on-surface-variant": "#424752",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#fabd00",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#ffdf9e",
+                    "tertiary": "#47403d",
+                    "surface-container-low": "#f3f3f3",
+                    "on-secondary-fixed-variant": "#5b4300",
+                    "surface-container-high": "#e8e8e8",
+                    "pure-white": "#FFFFFF",
+                    "surface": "#f9f9f9",
+                    "on-tertiary-container": "#d9cdca",
+                    "inverse-surface": "#2f3131",
+                    "surface-container-highest": "#e2e2e2",
+                    "outline": "#727784",
+                    "on-primary-container": "#bbd0ff",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#ece0dc",
+                    "warm-gold": "#E6AC00",
+                    "on-secondary-fixed": "#261a00",
+                    "on-surface": "#1a1c1c",
+                    "on-tertiary-fixed": "#201a18",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f9f9f9",
+                    "primary-container": "#0056b3",
+                    "on-primary-fixed-variant": "#004491",
+                    "impact-blue-dark": "#003D7A",
+                    "surface-container": "#eeeeee",
+                    "outline-variant": "#c2c6d4",
+                    "on-secondary-container": "#6c5000",
+                    "surface-variant": "#e2e2e2",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#cfc4c1",
+                    "inverse-primary": "#acc7ff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#5f5754",
+                    "secondary": "#785900",
+                    "surface-tint": "#115cb9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "sm": "12px",
+                    "base": "8px",
+                    "lg": "48px",
+                    "container-max": "1280px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Hanken Grotesk"],
+                    "display-xl": ["DM Sans"],
+                    "headline-md": ["DM Sans"],
+                    "headline-lg-mobile": ["DM Sans"],
+                    "headline-lg": ["DM Sans"],
+                    "body-md": ["DM Sans"],
+                    "body-lg": ["DM Sans"]
+            },
+            "fontSize": {
+                    "label-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .donate-card-active {
+            @apply border-secondary-container bg-secondary-container/10 ring-2 ring-secondary-container;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass-effect {
+            background: rgba(26, 26, 26, 0.8);
+        }
+        /* Dark mode overrides */
+        .dark body {
+            background-color: #1A1A1A;
+            color: #f1f1f1;
+        }
+        .dark .bg-pure-white {
+            background-color: #1A1A1A;
+        }
+        .dark .text-on-surface {
+            color: #f1f1f1;
+        }
+        .dark .text-on-surface-variant {
+            color: #e2e2e2;
+        }
+        .dark .border-outline-variant {
+            border-color: #4d4543;
+        }
+        .dark .bg-surface-container-low {
+            background-color: #2a2a2a;
+        }
+        .dark .bg-tertiary-fixed {
+            background-color: #5f5754;
+        }
+        .dark .text-on-tertiary-fixed {
+            color: #ece0dc;
+        }
+        .dark .text-on-tertiary-fixed-variant {
+            color: #d9cdca;
+        }
+        .dark .bg-surface {
+            background-color: #2a2a2a;
+        }
+        .dark .bg-surface-container-lowest {
+            background-color: #1A1A1A;
+        }
+        .dark .bg-primary\/10 {
+            background-color: rgba(0, 63, 135, 0.2);
+        }
+        .dark .bg-primary\/5 {
+            background-color: rgba(0, 63, 135, 0.15);
+        }
+        .dark input, .dark .border-outline {
+            border-color: #4d4543;
+            background-color: #2a2a2a;
+            color: #f1f1f1;
+        }
+        .dark input::placeholder {
+            color: #e2e2e2;
+        }
+        .dark .bg-surface-container-lowest {
+            background-color: #1A1A1A;
+        }
+        /* Fix for dark mode text visibility */
+.dark .text-on-surface {
+    color: #f1f1f1 !important;
+}
+
+.dark .text-on-surface-variant {
+    color: #e2e2e2 !important;
+}
+
+.dark .font-bold.text-on-surface {
+    color: #f1f1f1 !important;
+}
+
+.dark .bg-surface-container-low p,
+.dark .bg-surface-container-low div p {
+    color: #e2e2e2 !important;
+}
+
+
+
+
+    </style>
+</head>
+<body class="bg-background dark:bg-deep-onyx text-on-background dark:text-inverse-on-surface font-body-md overflow-x-hidden transition-colors duration-500">
+
+<!-- TopNavBar - Only Logo, About Us, Donate Now -->
+<nav class="sticky top-0 w-full z-50 bg-pure-white/90 dark:bg-deep-onyx/90 backdrop-blur-md shadow-sm transition-colors duration-300">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+    <a href="index.html" class="flex items-center gap-sm hover:opacity-80 transition-opacity">
+        <img alt="NayePankh Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG1caaOHmJFA1VBFwZFuVwszi99KoHq8YkzvipQ_6nfDe2039YyqHYcwe1fEN4r2vtRs6533TyscnsKRp307rEUKM7wnU_oQB0ZgMLaMVtvJV5iAY1xDHF8FJzpcPcB9iBgiwTldJNSKXrN7IxmNDNLVbjzGcOf1PrdpD-yWZWDnpWk3OWKX4BE5guH8Q2Agju1sVKsYvht1rOK4H47kateikdNuHuidnQ2Pt7PlCB7YZ2o48o7jtuBjb8H6LCikxRXkWc0VoHhQQ"/>
+        <span class="font-headline-md text-headline-md font-bold text-impact-blue-dark dark:text-primary-fixed-dim">NayePankh Foundation</span>
+    </a>
+    
+    <!-- Desktop Navigation - Only About Us -->
+    <div class="hidden md:flex items-center gap-lg">
+        <a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-warm-gold transition-colors duration-300" href="about.html">About Us</a>
+    </div>
+    
+    <!-- Right side buttons -->
+    <div class="flex items-center gap-md">
+        <button class="p-2 rounded-full hover:bg-surface-container dark:hover:bg-surface-container transition-colors duration-200" id="theme-toggle">
+            <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
+            <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+        </button>
+        <a href="donate.html">
+            <button class="bg-primary dark:bg-warm-gold hover:bg-primary-container dark:hover:bg-secondary-container text-pure-white dark:text-on-secondary-fixed px-6 py-2.5 rounded-lg font-label-sm text-label-sm scale-105 active:scale-95 transition-transform duration-200 uppercase">
+                Donate Now
+            </button>
+        </a>
+    </div>
+</div>
+</nav>
+
+<main class="relative">
+<!-- Hero & Impact Message -->
+<section class="relative py-xl overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/5 dark:from-warm-gold/5 to-transparent"></div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="space-y-md" id="hero-content">
+<span class="inline-block py-1 px-4 rounded-full bg-secondary-container/20 dark:bg-warm-gold/20 text-secondary dark:text-warm-gold font-label-sm text-label-sm">TRANSFORMING LIVES</span>
+<h1 class="font-headline-lg text-headline-lg lg:text-display-xl lg:font-display-xl text-impact-blue-dark dark:text-primary-fixed-dim leading-tight">
+                            Your contribution fuels a child's dream.
+                        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant max-w-[600px]">
+                            Join us in our mission to provide quality education, nutritious food, and hygienic environments for the underprivileged youth of India. 
+                        </p>
+<!-- Tax Relief Highlight -->
+<div class="bg-surface-container-low  p-md rounded-xl border-l-4 border-warm-gold flex items-start gap-sm shadow-sm">
+<span class="material-symbols-outlined text-warm-gold" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div>
+<p class="font-bold text-on-surface ">50% Income Tax Relief</p>
+<p class="text-on-surface-variant  text-body-md">All donations are tax-exempt under section 80G of the Income Tax Act.</p>
+</div>
+</div>
+</div>
+<!-- Visual Side / Trust Signals -->
+<div class="relative group">
+<div class="aspect-square w-full rounded-2xl overflow-hidden shadow-xl border border-outline-variant/30 dark:border-on-tertiary-fixed-variant/30 bg-pure-white dark:bg-deep-onyx">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" alt="A heartwarming scene in a rural Indian school where a young girl smiles brightly while holding a textbook." src="./images/donate.png"/>
+</div>
+<!-- Badges Overlay -->
+<div class="absolute -bottom-6 -left-6 md:left-6 flex gap-sm items-center">
+<div class="bg-pure-white dark:bg-deep-onyx p-sm rounded-lg shadow-lg flex flex-col items-center border border-outline-variant/20 dark:border-on-tertiary-fixed-variant/20">
+<span class="material-symbols-outlined text-primary dark:text-warm-gold text-4xl">verified_user</span>
+<span class="text-[10px] font-bold text-center mt-1 text-on-surface dark:text-inverse-on-surface">SECURE PAYMENT</span>
+</div>
+<div class="bg-pure-white dark:bg-deep-onyx p-sm rounded-lg shadow-lg flex flex-col items-center border border-outline-variant/20 dark:border-on-tertiary-fixed-variant/20">
+<span class="material-symbols-outlined text-secondary dark:text-warm-gold text-4xl">card_membership</span>
+<span class="text-[10px] font-bold text-center mt-1 text-on-surface dark:text-inverse-on-surface">80G CERTIFIED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Donation Form & Selection -->
+<section class="py-xl bg-surface-container-lowest dark:bg-deep-onyx">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<!-- Left: Presets & Causes -->
+<div class="lg:col-span-7 space-y-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface dark:text-inverse-on-surface mb-md">Choose Your Impact</h2>
+<p class="text-on-surface-variant dark:text-surface-variant font-body-md">Select a cause you want to support today. Every rupee goes directly to the field.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Cause 1 -->
+<button class="cause-selector text-left p-md border border-outline-variant dark:border-on-tertiary-fixed-variant rounded-xl transition-all duration-300 hover:border-primary dark:hover:border-warm-gold group bg-pure-white dark:bg-deep-onyx active:scale-95" onclick="selectCause('Food', this)">
+<div class="w-12 h-12 rounded-lg bg-primary/10 dark:bg-warm-gold/10 flex items-center justify-center mb-sm group-hover:bg-primary dark:group-hover:bg-warm-gold transition-colors">
+<span class="material-symbols-outlined text-primary dark:text-warm-gold group-hover:text-pure-white">lunch_dining</span>
+</div>
+<h3 class="font-bold text-on-surface dark:text-inverse-on-surface mb-xs">Daily Nutrition</h3>
+<p class="text-body-md text-on-surface-variant dark:text-surface-variant text-sm">Provide healthy meals to 10 children for a month.</p>
+</button>
+<!-- Cause 2 -->
+<button class="cause-selector text-left p-md border border-primary dark:border-warm-gold bg-primary/5 dark:bg-warm-gold/5 rounded-xl transition-all duration-300 ring-2 ring-primary dark:ring-warm-gold group active:scale-95" onclick="selectCause('Education', this)">
+<div class="w-12 h-12 rounded-lg bg-primary dark:bg-warm-gold flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-pure-white">school</span>
+</div>
+<h3 class="font-bold text-on-surface dark:text-inverse-on-surface mb-xs">Education</h3>
+<p class="text-body-md text-on-surface-variant dark:text-surface-variant text-sm">Sponsor school kits and uniforms for orphans.</p>
+</button>
+<!-- Cause 3 -->
+<button class="cause-selector text-left p-md border border-outline-variant dark:border-on-tertiary-fixed-variant rounded-xl transition-all duration-300 hover:border-primary dark:hover:border-warm-gold group bg-pure-white dark:bg-deep-onyx active:scale-95" onclick="selectCause('Hygiene', this)">
+<div class="w-12 h-12 rounded-lg bg-primary/10 dark:bg-warm-gold/10 flex items-center justify-center mb-sm group-hover:bg-primary dark:group-hover:bg-warm-gold transition-colors">
+<span class="material-symbols-outlined text-primary dark:text-warm-gold group-hover:text-pure-white">clean_hands</span>
+</div>
+<h3 class="font-bold text-on-surface dark:text-inverse-on-surface mb-xs">Sanitary Hygiene</h3>
+<p class="text-body-md text-on-surface-variant dark:text-surface-variant text-sm">Drive awareness and distribute sanitary kits.</p>
+</button>
+</div>
+
+<!-- Amount Presets -->
+<div class="space-y-md">
+<h3 class="font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface">Contribution Amount</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm">
+<button class="amount-btn py-3 px-6 border border-outline-variant dark:border-on-tertiary-fixed-variant rounded-lg font-bold hover:bg-primary/5 dark:hover:bg-warm-gold/5 transition-colors text-on-surface dark:text-inverse-on-surface" onclick="setAmount(1000)">₹1,000</button>
+<button class="amount-btn py-3 px-6 border-2 border-primary dark:border-warm-gold bg-primary/5 dark:bg-warm-gold/5 rounded-lg font-bold text-primary dark:text-warm-gold transition-colors" onclick="setAmount(2500)">₹2,500</button>
+<button class="amount-btn py-3 px-6 border border-outline-variant dark:border-on-tertiary-fixed-variant rounded-lg font-bold hover:bg-primary/5 dark:hover:bg-warm-gold/5 transition-colors text-on-surface dark:text-inverse-on-surface" onclick="setAmount(5000)">₹5,000</button>
+<button class="amount-btn py-3 px-6 border border-outline-variant dark:border-on-tertiary-fixed-variant rounded-lg font-bold hover:bg-primary/5 dark:hover:bg-warm-gold/5 transition-colors text-on-surface dark:text-inverse-on-surface" onclick="setAmount(10000)">₹10,000</button>
+</div>
+</div>
+
+<div class="bg-tertiary-fixed dark:bg-tertiary-container p-lg rounded-2xl flex items-center justify-between shadow-sm border border-outline-variant/20 dark:border-on-tertiary-fixed-variant/20">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 bg-pure-white dark:bg-deep-onyx rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary dark:text-warm-gold">trending_up</span>
+</div>
+<div>
+<h4 class="font-bold text-on-tertiary-fixed dark:text-on-tertiary">Join our Monthly Wings program</h4>
+<p class="text-on-tertiary-fixed-variant dark:text-surface-variant text-sm">Automate your impact with small monthly donations.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary dark:text-warm-gold cursor-pointer">arrow_forward</span>
+</div>
+</div>
+
+<!-- Right: Donation Form -->
+<div class="lg:col-span-5">
+<div class="bg-pure-white dark:bg-deep-onyx p-lg rounded-2xl shadow-xl border border-outline-variant/30 dark:border-on-tertiary-fixed-variant/30 sticky top-24">
+<div class="mb-lg">
+<h3 class="font-headline-md text-headline-md text-impact-blue-dark dark:text-primary-fixed-dim">Your Details</h3>
+<p class="text-on-surface-variant dark:text-surface-variant font-body-md">Information required for 80G receipt.</p>
+</div>
+<form class="space-y-md" id="donation-form">
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant">FULL NAME</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline dark:border-on-tertiary-fixed-variant focus:border-primary dark:focus:border-warm-gold focus:ring-1 focus:ring-primary dark:focus:ring-warm-gold outline-none transition-all bg-surface dark:bg-surface-container text-on-surface dark:text-inverse-on-surface" placeholder="As per PAN card" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant">EMAIL ADDRESS</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline dark:border-on-tertiary-fixed-variant focus:border-primary dark:focus:border-warm-gold focus:ring-1 focus:ring-primary dark:focus:ring-warm-gold outline-none transition-all bg-surface dark:bg-surface-container text-on-surface dark:text-inverse-on-surface" placeholder="For donation receipt" type="email"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant">PHONE NUMBER</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline dark:border-on-tertiary-fixed-variant focus:border-primary dark:focus:border-warm-gold focus:ring-1 focus:ring-primary dark:focus:ring-warm-gold outline-none transition-all bg-surface dark:bg-surface-container text-on-surface dark:text-inverse-on-surface" placeholder="+91 XXXXX XXXXX" type="tel"/>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant">PAN NUMBER (OPTIONAL FOR TAX RELIEF)</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline dark:border-on-tertiary-fixed-variant focus:border-primary dark:focus:border-warm-gold focus:ring-1 focus:ring-primary dark:focus:ring-warm-gold outline-none transition-all bg-surface dark:bg-surface-container text-on-surface dark:text-inverse-on-surface uppercase" placeholder="ABCDE1234F" type="text"/>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary dark:bg-warm-gold text-pure-white dark:text-on-secondary-fixed font-bold py-4 rounded-lg flex items-center justify-center gap-sm transition-all hover:bg-impact-blue-dark dark:hover:bg-secondary-container shadow-lg shadow-primary/20 dark:shadow-warm-gold/20 active:scale-95" type="submit">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lock</span>
+                                        Proceed to Secure Payment
+                                    </button>
+</div>
+<div class="flex items-center justify-center gap-lg pt-md">
+<img class="h-8 grayscale opacity-50" alt="Payment gateway logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxSlbEJFuG6kEmsDDRrAV9LAZPYf6swAJ0GfUQSub57bLiQLddv3jKiafs17Q02-bQ_lakGHowgNlZ4DXlnGITp1C88EJU-DewkuahNVV-pJOKpuRUVWsl_tmQnzOyJHZF5HBJuph63fycVW0Lp95g61xYxAGP5t2LSrqibbT030TcnDROtZVEgqEmV5T79JU7IvlJyKSnKlUPZkOvrBIajmTQQR45fsJliFfky7ocBvu0QNkzuNu60ktbnux27WKnQqBXR1WfMOc"/>
+<img class="h-8 grayscale opacity-50" alt="Government certification" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOachaG4jecN5AMy71OblUIEs7LgGlGiXFu1B5zVSlJSHe4S6M1BJIlP41cal2d4h8F_S3-JdHDkCKlvcSKjXhy0GMSpMERjcPvqZttE0doVJb7ZkwHEnguz1X7xdmeLqe0J7OnIWzLsw1TQZ8sDK7YQtRQ8BBbhFIZgJedk9LN9P6_QpSPzUkwA6zqGkoE6eFpEBNNsXd8I-MkteOMeei50o3YRLw-82geTJy9krGj_Iw8pqv3sRimIaR2sISRW_FMWm6hIABWOk"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Trust & Compliance Section -->
+<section class="py-xl bg-surface ">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<h2 class="font-headline-md text-headline-md text-on-surface  mb-xl">Accreditations &amp; Certifications</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-lg opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2 text-primary ">verified</span>
+<p class="font-bold text-on-surface ">12A Registered</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2 text-primary ">security</span>
+<p class="font-bold text-on-surface ">80G Tax Exempt</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2 text-primary ">policy</span>
+<p class="font-bold text-on-surface ">FCRA Compliant</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2 text-primary ">public</span>
+<p class="font-bold text-on-surface ">NITI Aayog</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-deep-onyx border-t border-outline-variant dark:border-on-tertiary-fixed-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg max-w-container-max mx-auto px-gutter py-xl">
+<div class="space-y-md">
+<div class="flex items-center gap-sm">
+<img alt="Logo" class="h-10 w-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG1caaOHmJFA1VBFwZFuVwszi99KoHq8YkzvipQ_6nfDe2039YyqHYcwe1fEN4r2vtRs6533TyscnsKRp307rEUKM7wnU_oQB0ZgMLaMVtvJV5iAY1xDHF8FJzpcPcB9iBgiwTldJNSKXrN7IxmNDNLVbjzGcOf1PrdpD-yWZWDnpWk3OWKX4BE5guH8Q2Agju1sVKsYvht1rOK4H47kateikdNuHuidnQ2Pt7PlCB7YZ2o48o7jtuBjb8H6LCikxRXkWc0VoHhQQ"/>
+<span class="font-headline-md text-headline-md font-bold text-impact-blue-dark dark:text-primary-fixed-dim">NayePankh</span>
+</div>
+<p class="text-on-surface-variant dark:text-surface-variant font-body-md">Spreading wings of hope and education across the underprivileged communities of India since 2021.</p>
+</div>
+<div class="space-y-md">
+<h4 class="font-bold text-primary dark:text-warm-gold">Quick Links</h4>
+<ul class="space-y-base text-on-surface-variant dark:text-surface-variant">
+<li><a class="hover:text-primary dark:hover:text-warm-gold transition-colors" href="index.html">Our Projects</a></li>
+<li><a class="hover:text-primary dark:hover:text-warm-gold transition-colors" href="#">Impact Reports</a></li>
+<li><a class="hover:text-primary dark:hover:text-warm-gold transition-colors" href="#">Volunteer Program</a></li>
+<li><a class="hover:text-primary dark:hover:text-warm-gold transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-md">
+<h4 class="font-bold text-primary dark:text-warm-gold">Legal</h4>
+<ul class="space-y-base text-on-surface-variant dark:text-surface-variant">
+<li><a class="hover:text-primary dark:hover:text-warm-gold transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary dark:hover:text-warm-gold transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary dark:hover:text-warm-gold transition-colors" href="#">80G Status</a></li>
+<li><a class="hover:text-primary dark:hover:text-warm-gold transition-colors" href="#">FCRA Compliance</a></li>
+</ul>
+</div>
+<div class="space-y-md">
+<h4 class="font-bold text-primary dark:text-warm-gold">Newsletter</h4>
+<p class="text-sm text-on-surface-variant dark:text-surface-variant">Get updates on our impact stories.</p>
+<div class="flex">
+<input class="w-full px-3 py-2 border border-outline dark:border-on-tertiary-fixed-variant rounded-l-lg outline-none bg-surface-container-lowest dark:bg-surface-container text-on-surface dark:text-inverse-on-surface" placeholder="Email" type="email"/>
+<button class="bg-primary dark:bg-warm-gold text-white dark:text-on-secondary-fixed px-4 py-2 rounded-r-lg"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-md border-t border-outline-variant/30 text-center text-sm text-on-surface-variant dark:text-surface-variant">
+            © 2024 NayePankh Foundation. All rights reserved. Registered NGO. All donations are tax-exempt under section 80G.
+        </div>
+</footer>
+
+<script>
+    // Theme Toggle Logic - FIXED
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    // Initialize theme from localStorage on page load
+    function initTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            html.classList.add('dark');
+        } else if (savedTheme === 'light') {
+            html.classList.remove('dark');
+        } else {
+            // If no saved preference, check system preference
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+        }
+    }
+
+    // Call init on page load
+    initTheme();
+
+    // Toggle theme when button is clicked
+    if (themeToggle) {
+        themeToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    }
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+        }
+    });
+
+    // Your existing functions
+    function selectCause(cause, element) {
+        // Reset all cause selectors
+        document.querySelectorAll('.cause-selector').forEach(btn => {
+            btn.classList.remove('border-primary', 'dark:border-warm-gold', 'bg-primary/5', 'dark:bg-warm-gold/5', 'ring-2', 'ring-primary', 'dark:ring-warm-gold');
+            btn.classList.add('border-outline-variant', 'dark:border-on-tertiary-fixed-variant', 'bg-pure-white', 'dark:bg-deep-onyx');
+            const iconContainer = btn.querySelector('div');
+            iconContainer.classList.remove('bg-primary', 'dark:bg-warm-gold');
+            iconContainer.classList.add('bg-primary/10', 'dark:bg-warm-gold/10');
+            const icon = btn.querySelector('span');
+            icon.classList.remove('text-pure-white');
+            icon.classList.add('text-primary', 'dark:text-warm-gold');
+        });
+
+        // Set active selector
+        element.classList.add('border-primary', 'dark:border-warm-gold', 'bg-primary/5', 'dark:bg-warm-gold/5', 'ring-2', 'ring-primary', 'dark:ring-warm-gold');
+        element.classList.remove('border-outline-variant', 'dark:border-on-tertiary-fixed-variant', 'bg-pure-white', 'dark:bg-deep-onyx');
+        const iconContainer = element.querySelector('div');
+        iconContainer.classList.add('bg-primary', 'dark:bg-warm-gold');
+        iconContainer.classList.remove('bg-primary/10', 'dark:bg-warm-gold/10');
+        const icon = element.querySelector('span');
+        icon.classList.add('text-pure-white');
+        icon.classList.remove('text-primary', 'dark:text-warm-gold');
+    }
+
+    function setAmount(amount) {
+        event.target.classList.add('border-2', 'border-primary', 'dark:border-warm-gold', 'bg-primary/5', 'dark:bg-warm-gold/5', 'text-primary', 'dark:text-warm-gold');
+        event.target.classList.remove('border', 'border-outline-variant', 'dark:border-on-tertiary-fixed-variant');
+        
+        document.querySelectorAll('.amount-btn').forEach(btn => {
+            if (btn !== event.target) {
+                btn.classList.remove('border-2', 'border-primary', 'dark:border-warm-gold', 'bg-primary/5', 'dark:bg-warm-gold/5', 'text-primary', 'dark:text-warm-gold');
+                btn.classList.add('border', 'border-outline-variant', 'dark:border-on-tertiary-fixed-variant', 'text-on-surface', 'dark:text-inverse-on-surface');
+            }
+        });
+    }
+
+    // Hero animation
+    window.addEventListener('DOMContentLoaded', () => {
+        const hero = document.getElementById('hero-content');
+        if (hero) {
+            hero.style.opacity = '0';
+            hero.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                hero.style.transition = 'all 0.6s ease-out';
+                hero.style.opacity = '1';
+                hero.style.transform = 'translateY(0)';
+            }, 100);
+        }
+    });
+</script>
+</body>

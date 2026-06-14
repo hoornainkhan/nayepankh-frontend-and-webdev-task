@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>NayePankh Foundation | Transforming Lives</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Hanken+Grotesk:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    <script id="tailwind-config" src="config.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background dark:bg-deep-onyx text-on-surface dark:text-inverse-on-surface transition-colors duration-500">
+<!-- Preloader Section -->
+<div id="preloader">
+    <div class="flex flex-col items-center gap-4">
+        <span class="loader"></span>
+        <p class="font-label-sm text-primary dark:text-primary-fixed-dim animate-pulse">Preparing Journey...</p>
+    </div>
+</div>
+
+<!-- Section 1: TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-pure-white/90 dark:bg-deep-onyx/90 backdrop-blur-md shadow-sm">
+    <nav class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+        <div class="h-10 flex items-center">
+            <img alt="NayePankh Foundation Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr-novpaaXKfk0zb4WmYG7edHaTBT0uNmMLBHBZOdJA4JhqU5zgB-Kn7Eu-zcp4FhcmYV28GOaBfDLf7zmgLFAvClNx9PkyynmCgjof2cqhhEHbLnR1BK8TdFuQREiEdrdz3gmz8aBm_sLcMSOC1GPnVNpxfrwMe7FGYSDG0MarFnG6cXB5ZG7gY60ezlg8tTwqzzSN1naOfXmZrQZs1nciEv1cMeUJ2T4k1qCr_3mbIP7EpkrRie2LIlD3lX6dXw4sPWGIitvnl4"/>
+        </div>
+        <div class="hidden md:flex items-center gap-md">
+            <a class="font-body-md text-body-md text-primary dark:text-warm-gold border-b-2 border-primary dark:border-warm-gold pb-1 hover:text-primary dark:hover:text-warm-gold transition-colors duration-300" href="#">Our Work</a>
+            <a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-warm-gold transition-colors duration-300" href="about.html">About Us</a>
+            <!-- <a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-warm-gold transition-colors duration-300" href="#">Impact</a> -->
+            <!-- <a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-warm-gold transition-colors duration-300" href="#">Careers</a> -->
+        </div>
+        <div class="flex items-center gap-md">
+            <button class="p-2 rounded-full hover:bg-surface-container transition-colors duration-200" id="theme-toggle">
+                <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
+                <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+            </button>
+            <a href="donate.html">
+            <button class="bg-primary hover:bg-primary-container text-pure-white px-6 py-2.5 rounded-lg font-label-sm text-label-sm scale-105 active:scale-95 transition-transform duration-200 uppercase">
+                Donate Now
+            </button>
+            </a>
+        </div>
+    </nav>
+</header>
+
+<!-- Section 2: Cinematic Hero -->
+<section class="relative h-[90vh] w-full flex items-center overflow-hidden bg-black" id="hero">
+    <!-- Final Background Layer -->
+    <img alt="Background Focus" class="bg-full-expanded" id="bg-expanded" src="./images/center.png"/>
+    <!-- Collage Layer -->
+    <div class="hero-grid-container" id="cinematic-grid">
+        <div class="hero-grid-cell scatter-left"><img alt="Impact 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfkZl2TzSub2YSEETx0FKUOdvT6hWBLMWK6GQ2jWtdTWLZUn8M8uAMcYT1xn9UfmALlw96NVY73wHCX_Ii6Y6yJbNn7R3f_vdXSn-RA9OJfsRVg2ZGQmObVda9dwK12cOdYF0G5rmvIls44wDpJbP4XecsuAqxHmXu_95Lt5aCAseFSW4RRrW3DP85tdnYI_-MJ_9WbUYzAFPiaiglrDMqwFal0UVowu-u61C-J7vminbu84aM9mSBDpMUOhFT2S06prBH9pZKIGg"/></div>
+        <div class="hero-grid-cell scatter-left"><img alt="Impact 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVUm7UKUhnH9t2aoSxBpbjumo81PCf0WTGNxDsNxKgTR75afGPEnCalocnnTq3JJiG_elJhg2Ce89T2Gjmg6vtXPC8IEqN1dtKZtSOuB5AGN_DX0hB_ay_7YnrVapTOx_ArdB11427GC_5LH8thSPskd-hjQaM5yeO3UAc0hoVZAVD8O_5NZ-QkhLF436ItSo_3r9pieL8wOUKuGlSmDXQhNfYkSRtcRAt4CUe6C5sTz-CWzFBBV4WdZAEepIkRciycIrZxYbMsJY"/></div>
+        <div class="hero-grid-cell" id="central-cell"><img alt="Impact Central" src="./images/center.png"/></div>
+        <div class="hero-grid-cell scatter-right"><img alt="Impact 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYRbaqFniIELysKQMMPhvSKyBXtWj0jMeeTLBE6PfGDoaPxL8rq9QrvPATNmvgM--NAA8CH0tWmWuTPKp-EPA_WEX6lXu5loHUHbf8mfVX4_ccw-S_PZTlC4P0UE1YR4C5ZUlqsABAXErk9MX6HmGZDGDGD8ML8VZZViauPTmCOUt7t0TYZ8Hw6jf-1N1ujbqeqn0Z-d-5kFha7eX1AuB9-_tx5HPtBv3u2gnEkGAqm3Kh6p07lA4t08Rf1uyn04OdM9DfpqZT6TA"/></div>
+        <div class="hero-grid-cell scatter-right"><img alt="Impact 4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX4hpqxbBrFg5S7tf-MaOIw6PAxlEMTKbLP7of9wxTMZazKfS9gwIxp7mRrUepKvjZ1uCAAVJXnQnHmSAU_LFO2JjCEhn4IhRCBrIsvjkvRoqv0EbSJXF8H8sGhEBBm_S18krits-WSw8Dr02KiD60TZzK5VwdACyK_67_OU0mIa_03eg_-lZCP8ai9qwx6AfITOXUAxkmVf90Gx7drPne5Oi2R12m8dV9Ue855FgN8XNR6r3j-zj7rwrY2s1LyQAfmGE7YXB8H9M"/></div>
+    </div>
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 z-[15] opacity-0" id="hero-overlay"></div>
+    <!-- Hero Content -->
+    <div class="relative z-[20] max-w-container-max mx-auto px-gutter text-center w-full opacity-0 translate-y-12 transition-all duration-1000 ease-out" id="hero-content">
+        <span class="inline-block bg-warm-gold text-on-secondary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm mb-6 tracking-wider">
+            80G | 12A &amp; UP GOVT. REGISTERED NGO
+        </span>
+        <h1 class="font-display-xl text-display-xl mb-4 text-pure-white">
+            NayePankh <span class="text-primary-fixed-dim">Foundation</span>
+        </h1>
+        <h2 class="font-headline-md text-headline-md mb-6 font-medium text-surface-variant">
+            It's that easy to bring a Smile on Their Faces
+        </h2>
+        <p class="max-w-2xl mx-auto font-body-lg text-body-lg mb-10 text-outline-variant">
+            We don't ask for much, just help us with what you can — Be it Money, Skill or Your Time. Every contribution fuels a child's dream.
+        </p>
+        <div class="flex flex-col md:flex-row gap-md justify-center">
+            <button class="bg-primary hover:bg-secondary-container hover:text-on-secondary-container text-pure-white px-12 py-4 rounded-lg font-headline-md text-headline-md transition-all duration-300 shadow-lg">
+                Donate Now
+            </button>
+            <button class="border border-pure-white/30 hover:bg-pure-white/10 text-pure-white px-12 py-4 rounded-lg font-headline-md text-headline-md transition-all duration-300">
+                Our Mission
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: About Us -->
+<section class="py-xl bg-pure-white dark:bg-deep-onyx">
+    <div class="max-w-container-max mx-auto px-gutter grid md:grid-cols-2 gap-xl items-center reveal-on-scroll">
+        <div>
+            <span class="text-primary font-bold tracking-widest uppercase font-label-sm text-label-sm mb-4 block">Think global, Act local.</span>
+            <h2 class="font-headline-lg text-headline-lg mb-6 text-impact-blue-dark dark:text-primary-fixed-dim">We empower communities from within.</h2>
+            <div class="space-y-4 font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant">
+                <p>
+                    "NayePankh Foundation" is a non governmental organisation. We are a team of students who provide a platform to the youth to utilize their energy for the growth of the nation.
+                </p>
+                <p>
+                    Our focus is on education, health, and holistic development. By bridging the gap between privilege and poverty, we ensure that every child gets their "New Wings" (NayePankh) to fly towards a brighter future.
+                </p>
+            </div>
+            <div class="flex gap-md mt-10">
+                <button class="bg-primary text-pure-white px-8 py-3 rounded-lg font-label-sm text-label-sm hover:shadow-xl transition-all">LEARN MORE</button>
+                <button class="border border-outline text-primary dark:text-warm-gold px-8 py-3 rounded-lg font-label-sm text-label-sm hover:bg-surface-container-low transition-all">OUR CERTIFICATES</button>
+            </div>
+        </div>
+        <div class="relative">
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+                <img alt="Student Impact" class="w-full h-full object-cover" src="./images/image.png"/>
+            </div>
+            <div class="absolute -bottom-8 -left-8 bg-warm-gold p-8 rounded-xl shadow-xl hidden lg:block">
+                <div class="text-display-xl font-bold text-on-secondary-fixed">5k+</div>
+                <div class="font-label-sm text-label-sm text-on-secondary-fixed uppercase tracking-widest">Lives Impacted</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Impact Stats -->
+<section class="py-xl bg-surface-container-low dark:bg-black/20">
+    <div class="max-w-3xl mx-auto px-gutter text-center reveal-on-scroll">
+        <span class="bg-primary/10 text-primary dark:text-primary-fixed-dim px-4 py-1 rounded-full font-label-sm text-label-sm mb-6 inline-block">UP GOVT. | 80G &amp; 12A Registered</span>
+        <h2 class="font-headline-lg text-headline-lg mb-6">Welcome to NayePankh Foundation</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant mb-xl leading-relaxed">
+            We are one of the Biggest Student led NGO of India. Started by a group of passionate individuals, we've grown into a national movement that focuses on grass-root level change and youth empowerment.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-md">
+            <div class="bg-pure-white dark:bg-deep-onyx p-6 rounded-xl shadow-sm border border-outline-variant hover:border-primary transition-colors">
+                <span class="material-symbols-outlined text-warm-gold text-4xl mb-4">school</span>
+                <h3 class="font-headline-md text-headline-md">10+</h3>
+                <p class="font-label-sm text-label-sm opacity-70 uppercase">Schools Adopted</p>
+            </div>
+            <div class="bg-pure-white dark:bg-deep-onyx p-6 rounded-xl shadow-sm border border-outline-variant hover:border-primary transition-colors">
+                <span class="material-symbols-outlined text-warm-gold text-4xl mb-4">volunteer_activism</span>
+                <h3 class="font-headline-md text-headline-md">200+</h3>
+                <p class="font-label-sm text-label-sm opacity-70 uppercase">Volunteers</p>
+            </div>
+            <div class="bg-pure-white dark:bg-deep-onyx p-6 rounded-xl shadow-sm border border-outline-variant hover:border-primary transition-colors">
+                <span class="material-symbols-outlined text-warm-gold text-4xl mb-4">restaurant</span>
+                <h3 class="font-headline-md text-headline-md">50k+</h3>
+                <p class="font-label-sm text-label-sm opacity-70 uppercase">Meals Served</p>
+            </div>
+            <div class="bg-pure-white dark:bg-deep-onyx p-6 rounded-xl shadow-sm border border-outline-variant hover:border-primary transition-colors">
+                <span class="material-symbols-outlined text-warm-gold text-4xl mb-4">favorite</span>
+                <h3 class="font-headline-md text-headline-md">100%</h3>
+                <p class="font-label-sm text-label-sm opacity-70 uppercase">Transparency</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: Join Team -->
+<section class="py-xl bg-pure-white dark:bg-deep-onyx overflow-hidden">
+    <div class="max-w-container-max mx-auto px-gutter grid md:grid-cols-2 gap-xl items-center reveal-on-scroll">
+        <div class="order-2 md:order-1 relative">
+            <div class="aspect-video md:aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                <img alt="Volunteers in Action" class="w-full h-full object-cover" src="./images/team.png"/>
+            </div>
+            <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+        </div>
+        <div class="order-1 md:order-2">
+            <h2 class="font-headline-lg text-headline-lg mb-6 text-impact-blue-dark dark:text-primary-fixed-dim">Join our TEAM</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant mb-8 leading-relaxed">
+                Join our team and make a difference in the lives of those in need. We are always looking for passionate individuals who believe in the power of youth-led change.
+            </p>
+            <ul class="space-y-4 mb-10">
+                <li class="flex items-center gap-3 font-body-md text-body-md">
+                    <span class="material-symbols-outlined text-warm-gold" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    Develop Leadership Skills
+                </li>
+                <li class="flex items-center gap-3 font-body-md text-body-md">
+                    <span class="material-symbols-outlined text-warm-gold" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    Direct On-Ground Impact
+                </li>
+            </ul>
+            <button class="bg-primary hover:bg-primary-container text-pure-white px-10 py-4 rounded-lg font-headline-md text-headline-md transition-all shadow-lg active:scale-95">
+                JOIN US
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Section 6: Founder Quote -->
+<section class="py-xl bg-surface-container-low dark:bg-surface-container-highest/10">
+    <div class="max-w-container-max mx-auto px-gutter text-center reveal-on-scroll">
+        <span class="material-symbols-outlined text-primary/30 text-8xl mb-8">format_quote</span>
+        <blockquote class="font-headline-lg text-headline-lg italic text-impact-blue-dark dark:text-warm-gold mb-8 max-w-4xl mx-auto leading-tight">
+            "If we all do something, then together there is no problem that we cannot solve!"
+        </blockquote>
+        <div class="h-px w-20 bg-primary mx-auto mb-6"></div>
+        <p class="font-headline-md text-headline-md font-bold mb-1">PRASHANT SHUKLA</p>
+        <p class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant uppercase tracking-widest">Founder &amp; President, NayePankh Foundation</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-deep-onyx border-t border-outline-variant dark:border-on-tertiary-fixed-variant">
+    <div class="max-w-container-max mx-auto px-gutter pt-xl pb-base">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-lg mb-xl">
+            <div class="col-span-1 md:col-span-1">
+                <div class="h-10 flex items-center mb-6">
+                    <img alt="NayePankh Foundation Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr-novpaaXKfk0zb4WmYG7edHaTBT0uNmMLBHBZOdJA4JhqU5zgB-Kn7Eu-zcp4FhcmYV28GOaBfDLf7zmgLFAvClNx9PkyynmCgjof2cqhhEHbLnR1BK8TdFuQREiEdrdz3gmz8aBm_sLcMSOC1GPnVNpxfrwMe7FGYSDG0MarFnG6cXB5ZG7gY60ezlg8tTwqzzSN1naOfXmZrQZs1nciEv1cMeUJ2T4k1qCr_3mbIP7EpkrRie2LIlD3lX6dXw4sPWGIitvnl4"/>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant mb-6">
+                    Empowering the youth, nurturing the future. Registered NGO under Section 8 of the Companies Act.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-label-sm text-label-sm font-bold uppercase mb-6">Contact Us</h4>
+                <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl">mail</span>
+                        contact@nayepankh.com
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-sm text-label-sm font-bold uppercase mb-6">Legal</h4>
+                <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">
+                    <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-sm text-label-sm font-bold uppercase mb-6">Explore</h4>
+                <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">
+                    <li><a class="hover:text-primary transition-colors" href="#">Our Team</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-outline-variant/30 text-center">
+            <p class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant max-w-2xl mx-auto mb-4">
+                © 2024 NayePankh Foundation. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
